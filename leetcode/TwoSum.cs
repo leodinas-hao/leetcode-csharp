@@ -22,9 +22,9 @@ Input: nums = [3,3], target = 6
 Output: [0,1]
 
 Constraints:
-2 <= nums.length <= 104
--109 <= nums[i] <= 109
--109 <= target <= 109
+2 <= nums.length <= 10^4
+-10^9 <= nums[i] <= 10^9
+-10^9 <= target <= 10^9
 Only one valid answer exists.
 */
 
@@ -34,7 +34,23 @@ public class Solution
 {
   public int[] TwoSum(int[] nums, int target)
   {
-    // throw new NotImplementedException();
-    return nums;
+    int[] indices = new int[2];
+    // a dict to keep (num value & the associated index)
+    Dictionary<int, int> map = new Dictionary<int, int>();
+    for (int i = 0; i < nums.Length; i++)
+    {
+      int remainder = target - nums[i];
+      if (map.ContainsKey(remainder))
+      {
+        indices[0] = i;
+        indices[1] = map[remainder];
+        break;
+      }
+      else
+      {
+        map.TryAdd(nums[i], i);
+      }
+    }
+    return indices;
   }
 }
