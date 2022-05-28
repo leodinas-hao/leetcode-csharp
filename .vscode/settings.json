@@ -1,3 +1,5 @@
 {
-  "dotnet-test-explorer.testProjectPath": "tests"
+  "dotnet-test-explorer.testProjectPath": "tests",
+  "dotnet-test-explorer.treeMode": "full",
+  "dotnet-test-explorer.autoExpandTree": true
 }
