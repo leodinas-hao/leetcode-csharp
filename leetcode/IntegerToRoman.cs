@@ -49,8 +49,11 @@ public class Solution
 {
   public string IntToRoman(int num)
   {
-    ValueTuple<int, string>[] map = new ValueTuple<int, string>[]
-    {
+    // init array with `new` keyword
+    // ValueTuple<int, string>[] map = new ValueTuple<int, string>[] { };
+
+    // init array without `new` keyword
+    ValueTuple<int, string>[] map = {
       (1000, "M"),
       (900, "CM"),
       (500, "D"),
