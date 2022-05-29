@@ -11,20 +11,20 @@ public class NQueensTests
     var sol = new Solution();
     var board = sol.InitBoard(len);
     board[1, 1] = true;
-    Assert.True(sol.IsAttacking(board, 0, 0));
-    Assert.True(sol.IsAttacking(board, 1, 2));
-    Assert.True(sol.IsAttacking(board, 2, 2));
+    Assert.True(sol.IsAttacked(board, 0, 0));
+    Assert.True(sol.IsAttacked(board, 1, 2));
+    Assert.True(sol.IsAttacked(board, 2, 2));
     // test board 5
     len = 5;
     board = sol.InitBoard(len);
     board[2, 2] = true;
-    Assert.False(sol.IsAttacking(board, 0, 1));
-    Assert.False(sol.IsAttacking(board, 1, 4));
-    Assert.False(sol.IsAttacking(board, 4, 3));
-    Assert.True(sol.IsAttacking(board, 1, 3));
-    Assert.True(sol.IsAttacking(board, 0, 4));
-    Assert.True(sol.IsAttacking(board, 4, 4));
-    Assert.True(sol.IsAttacking(board, 4, 0));
+    Assert.False(sol.IsAttacked(board, 0, 1));
+    Assert.False(sol.IsAttacked(board, 1, 4));
+    Assert.False(sol.IsAttacked(board, 4, 3));
+    Assert.True(sol.IsAttacked(board, 1, 3));
+    Assert.True(sol.IsAttacked(board, 0, 4));
+    Assert.True(sol.IsAttacked(board, 4, 4));
+    Assert.True(sol.IsAttacked(board, 4, 0));
   }
 
   [Fact]

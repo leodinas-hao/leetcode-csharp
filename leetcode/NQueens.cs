@@ -41,22 +41,26 @@ public class Solution
   public const string QUEEN = "Q";
   public const string EMPTY = ".";
 
-  public bool[,] InitBoard(int num)
+  // keep a reference of board size
+  // to avoid recalculating/keeping passing the variable
+  // to calculate the board size from board: `board.GetUpperBound(0) + 1`
+  private int size = 0;
+  public bool[,] InitBoard(int size)
   {
     // init an 2D/multi-dimensional array with initial values of false to indicate empty space
     // note: multi-dimensional array doesn't support indexers/ranges,
     // however 2D array saves computing space as it's a single block of memory
-    return new bool[num, num];
+    this.size = size;
+    return new bool[size, size];
   }
 
   public IList<string> PrintBoard(bool[,] board)
   {
-    int num = board.GetUpperBound(0) + 1;
     var printed = new List<string>();
-    for (int i = 0; i < num; i++)
+    for (int i = 0; i < size; i++)
     {
       var row = "";
-      for (int j = 0; j < num; j++)
+      for (int j = 0; j < size; j++)
       {
         row += board[i, j] ? QUEEN : EMPTY;
       }
@@ -65,10 +69,11 @@ public class Solution
     return printed;
   }
 
-  public bool IsAttacking(bool[,] board, int row, int col)
+  public bool IsAttacked(bool[,] board, int row, int col)
   {
-    int num = board.GetUpperBound(0) + 1;
-    for (int i = 0; i < num; i++)
+    // check vertically, horizontally, or diagonally to see if
+    // the position is attacked by another queen
+    for (int i = 0; i < size; i++)
     {
       // check horizontal
       if (board[row, i]) { return true; }
@@ -82,59 +87,48 @@ public class Solution
       // check up/right
       // nextRow = row - i;
       nextCol = col + i;
-      if (nextRow >= 0 && nextCol < num && board[nextRow, nextCol]) { return true; }
+      if (nextRow >= 0 && nextCol < size && board[nextRow, nextCol]) { return true; }
       // check down/left
       nextRow = row + i;
       nextCol = col - i;
-      if (nextRow < num && nextCol >= 0 && board[nextRow, nextCol]) { return true; }
+      if (nextRow < size && nextCol >= 0 && board[nextRow, nextCol]) { return true; }
       // check down/right
       // nextRow = row + i;
       nextCol = col + i;
-      if (nextRow < num && nextCol < num && board[nextRow, nextCol]) { return true; }
+      if (nextRow < size && nextCol < size && board[nextRow, nextCol]) { return true; }
     }
     return false;
   }
 
-  public int PlaceQueens(bool[,] board, int row, int col)
+  public void Solve(IList<IList<string>> solutions, bool[,] board, int col)
   {
-    int num = board.GetUpperBound(0) + 1;
-    // place the 1st queen at the given position
-    board[row, col] = true;
-    int queens = 1;
-
-    for (int i = row * num + col + 1; i < num * num; i++)
+    if (col == size)
     {
-      int nextCow = i / num;
-      int nextRow = i % num;
-      if (!IsAttacking(board, nextCow, nextRow))
+      // when processed all columns, it's a valid solution
+      solutions.Add(PrintBoard(board));
+      return;
+    }
+
+    for (int row = 0; row < size; row++)
+    {
+      if (!IsAttacked(board, row, col))
       {
-        board[nextCow, nextRow] = true;
-        queens++;
-        if (queens == num)
-        {
-          break;
-        }
+        // it's a safe position, place a queen
+        board[row, col] = true;
+        // process next column
+        Solve(solutions, board, col + 1);
+        // if reached here, no valid solution found
+        // removed the last placed queen
+        board[row, col] = false;
       }
     }
-    return queens;
   }
 
   public IList<IList<string>> SolveNQueens(int n)
   {
     var solutions = new List<IList<string>>();
-
-    for (int i = 0; i < n; i++)
-    {
-      for (int j = 0; j < n; j++)
-      {
-        var board = InitBoard(n);
-        if (n == PlaceQueens(board, i, j))
-        {
-          solutions.Add(PrintBoard(board));
-        }
-      }
-    }
-
+    var board = InitBoard(n);
+    Solve(solutions, board, 0);
     return solutions;
   }
 }
