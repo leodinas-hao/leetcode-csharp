@@ -37,17 +37,23 @@ public class Solution
     // find the boundary of the result
     // between max element & total sum
     int maxElement = -1;
-    int totalSum = -1;
+    int totalSum = 0;
     for (int i = 0; i < nums.Length; i++)
     {
       maxElement = Math.Max(nums[i], maxElement);
       totalSum += nums[i];
     }
 
+    // quick way out if m == 1; then the total sum is the answer
+    if (m == 1)
+    {
+      return totalSum;
+    }
+
     // try to find a solution, which can meet the best guessing boundary
     int left = maxElement;
     int right = totalSum;
-    int minimumLargestSum = -1;
+    int minimumLargestSum = 0;
     while (left <= right)
     {
       // get a mid value, which can be the best guessing minimized max sum
