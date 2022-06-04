@@ -10,9 +10,8 @@ public class ConvertBinaryNumberInALinkedListToIntegerTests
     ListNode head = curr;
     for (int i = 1; i < bits.Length; i++)
     {
-      var next = new ListNode(bits[i]);
-      curr.next = next;
-      curr = next;
+      curr.next = new ListNode(bits[i]);
+      curr = curr.next;
     }
     return head;
   }
