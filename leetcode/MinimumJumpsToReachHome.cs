@@ -40,16 +40,15 @@ Position x is not forbidden.
 
 namespace LeetCode.MinimumJumpsToReachHome;
 
-/**
-this solution keeps getting "Time Limit Exceeded" on LeetCode
-not sure how to improve further :(
-*/
+
 public class Solution
 {
   public int MinimumJumps(int[] forbidden, int a, int b, int x)
   {
-    // a edge case where a == b & x % a != 0, then there is no solution
+    // edge case where a == b & x % a != 0, then there is no solution
     if (a == b && x % a != 0) return -1;
+    // edge case x is 0
+    if (x == 0) return 0;
 
     // farthest to reach is a + b + max(x, forbidden)
     // See: https://leetcode.com/problems/minimum-jumps-to-reach-home/discuss/978357/C%2B%2B-bidirectional-BFS-solution-with-proof-for-search-upper-bound
@@ -59,20 +58,19 @@ public class Solution
     b = b * -1;
 
     // track a list of positions visited before to avoid revisit
-    // visited format like: (current_pos, next_move[+a|-b])
-    var visited = new List<Tuple<int, int>>();
+    var visited = new List<ValueTuple<int, int>>();
     // add all forbidden positions
     foreach (var f in forbidden)
     {
-      visited.Add(new Tuple<int, int>(f - a, a));
-      visited.Add(new Tuple<int, int>(f + b, b));
+      visited.Add((f - a, a));
+      visited.Add((f - b, b));
     }
 
     // the queue with int Tuple like this: (current_pos, next_move[+a|-b])
-    var queue = new Queue<Tuple<int, int>>();
+    var queue = new Queue<ValueTuple<int, int>>();
     int count = 0;
     // queue first step as only can move forward
-    queue.Enqueue(new Tuple<int, int>(0, a));
+    queue.Enqueue((0, a));
 
     while (queue.Any())
     {
@@ -83,7 +81,7 @@ public class Solution
         var jump = queue.Dequeue();
         var pos = jump.Item1 + jump.Item2;
         if (pos == x) return count;
-        if (visited.Contains(jump) || pos < 0 || pos > max)
+        if (pos < 0 || pos > max || visited.Contains(jump))
         {
           continue;
         }
@@ -93,15 +91,8 @@ public class Solution
           visited.Add(jump);
 
           // try move forward
-          if (pos + a < max)
-          {
-            queue.Enqueue(new Tuple<int, int>(pos, a));
-          }
-          // try move backward (cannot move back twice in a row)
-          if (jump.Item2 > 0)
-          {
-            queue.Enqueue(new Tuple<int, int>(pos, b));
-          }
+          queue.Enqueue((pos, a));
+          if (jump.Item2 > 0) queue.Enqueue((pos, b));
         }
       }
     }
