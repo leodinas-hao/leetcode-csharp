@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "leetcode", "leetcode\leetcode.csproj", "{13E9FB72-FF57-4B72-9F2B-A9A2502B6A0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tests", "tests\tests.csproj", "{95C69C85-C655-4A16-9CD3-8CFFE2567BE6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{13E9FB72-FF57-4B72-9F2B-A9A2502B6A0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13E9FB72-FF57-4B72-9F2B-A9A2502B6A0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13E9FB72-FF57-4B72-9F2B-A9A2502B6A0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13E9FB72-FF57-4B72-9F2B-A9A2502B6A0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95C69C85-C655-4A16-9CD3-8CFFE2567BE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95C69C85-C655-4A16-9CD3-8CFFE2567BE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95C69C85-C655-4A16-9CD3-8CFFE2567BE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95C69C85-C655-4A16-9CD3-8CFFE2567BE6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
