@@ -51,7 +51,8 @@ public class Solution
     // a edge case where a == b & x % a != 0, then there is no solution
     if (a == b && x % a != 0) return -1;
 
-    // farthest to reach
+    // farthest to reach is a + b + max(x, forbidden)
+    // See: https://leetcode.com/problems/minimum-jumps-to-reach-home/discuss/978357/C%2B%2B-bidirectional-BFS-solution-with-proof-for-search-upper-bound
     int max = a + b + Math.Max(x, forbidden.Max());
 
     // assign b direction
