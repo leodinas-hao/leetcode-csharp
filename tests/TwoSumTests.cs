@@ -12,7 +12,7 @@ public class TwoSumTests
   public void Test1(int[] nums, int target)
   {
     var actual = new Solution().TwoSum(nums, target);
-    Assert.Equal(actual.Length, 2);
-    Assert.Equal(nums[actual[0]] + nums[actual[1]], target);
+    Assert.Equal(2, actual.Length);
+    Assert.Equal(target, nums[actual[0]] + nums[actual[1]]);
   }
 }

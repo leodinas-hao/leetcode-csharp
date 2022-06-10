@@ -44,7 +44,7 @@ public class AllPathsFromSourceToTargetTests
     Assert.Equal(result.Count, expect.Length);
     foreach (var row in expect)
     {
-      Assert.True(result.Any(r => Enumerable.SequenceEqual(r, row)));
+      Assert.Contains(result, r => Enumerable.SequenceEqual(r, row));
     }
   }
 }

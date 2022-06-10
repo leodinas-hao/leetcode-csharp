@@ -46,7 +46,7 @@ public class PacificAtlanticWaterFlowTests
     Assert.Equal(expect.Length, result.Count);
     foreach (var r in result)
     {
-      Assert.True(expect.Any(arr => arr[0] == r[0] && arr[1] == r[1]));
+      Assert.Contains(expect, arr => arr[0] == r[0] && arr[1] == r[1]);
     }
   }
 }

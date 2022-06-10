@@ -32,8 +32,8 @@ public class NQueensTests
   {
     var len = 5;
     var board = new Solution().InitBoard(len);
-    Assert.Equal(board[0, 0], false);
-    Assert.Equal(board.Length, len * len);
+    Assert.False(board[0, 0]);
+    Assert.Equal(len * len, board.Length);
   }
 
   [Fact]
@@ -45,7 +45,7 @@ public class NQueensTests
     board[0, 0] = true;
     var printed = sol.PrintBoard(board);
     Assert.Equal(printed.Count(), len);
-    Assert.True(printed[0].StartsWith("Q"));
+    Assert.StartsWith("Q", printed[0]);
   }
 
   [Theory]
