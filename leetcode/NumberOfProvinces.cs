@@ -1,0 +1,68 @@
+/*
+Number of Provinces
+https://leetcode.com/problems/number-of-provinces/
+
+There are n cities. Some of them are connected, while some are not. If city a is connected directly with city b, 
+and city b is connected directly with city c, then city a is connected indirectly with city c.
+A province is a group of directly or indirectly connected cities and no other cities outside of the group.
+You are given an n x n matrix isConnected where isConnected[i][j] = 1 if the ith city and 
+the jth city are directly connected, and isConnected[i][j] = 0 otherwise.
+
+Return the total number of provinces.
+
+Example 1:
+1 --- 2
+   3
+
+Input: isConnected = [[1,1,0],[1,1,0],[0,0,1]]
+Output: 2
+
+Example 2:
+1     2
+   3
+
+Input: isConnected = [[1,0,0],[0,1,0],[0,0,1]]
+Output: 3
+
+Constraints:
+
+1 <= n <= 200
+n == isConnected.length
+n == isConnected[i].length
+isConnected[i][j] is 1 or 0.
+isConnected[i][i] == 1
+isConnected[i][j] == isConnected[j][i]
+*/
+
+namespace LeetCode.NumberOfProvinces;
+
+public class Solution
+{
+  public int FindCircleNum(int[][] isConnected)
+  {
+    int provinces = 0;
+    HashSet<int> visited = new HashSet<int>();
+
+    void dfs(int node)
+    {
+      if (visited.Contains(node)) return;
+      visited.Add(node);
+      for (int i = 0; i < isConnected[node].Length; i++)
+      {
+        if (isConnected[node][i] == 1 && node != i)
+          dfs(i);
+      }
+    }
+
+    for (int i = 0; i < isConnected.Length; i++)
+    {
+      if (!visited.Contains(i))
+      {
+        dfs(i);
+        provinces++;
+      }
+    }
+
+    return provinces;
+  }
+}
