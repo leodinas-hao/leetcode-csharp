@@ -37,6 +37,9 @@ The tests are generated such that there is exactly one solution.
 
 namespace LeetCode.TwoSumIIInputArrayIsSorted;
 
+/*
+binary search to find the remaining of the sum
+*/
 public class Solution
 {
   public int[] TwoSum(int[] numbers, int target)
@@ -51,6 +54,35 @@ public class Solution
         if (sum == target) return new int[] { i + 1, mid + 1 };
         else if (sum < target) lo = mid + 1;
         else hi = mid - 1;
+      }
+    }
+    throw new InvalidDataException();
+  }
+}
+
+/*
+2 pointers
+move left to increase sum; move right to decrease the sum
+*/
+public class Solution2
+{
+  public int[] TwoSum(int[] numbers, int target)
+  {
+    int left = 0, right = numbers.Length - 1;
+    while (left < right)
+    {
+      int sum = numbers[left] + numbers[right];
+      if (sum < target)
+      {
+        left++;
+      }
+      else if (sum > target)
+      {
+        right--;
+      }
+      else
+      {
+        return new int[] { left + 1, right + 1 };
       }
     }
     throw new InvalidDataException();
