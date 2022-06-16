@@ -21,6 +21,10 @@ Constraints:
 
 namespace LeetCode.MoveZeroes;
 
+/**
+2 pointers
+idea is to move zero & non-zero each step along the iteration
+*/
 public class Solution
 {
   public void MoveZeroes(int[] nums)
@@ -35,13 +39,13 @@ public class Solution
         i++;
         j++;
       }
-      else if (nums[i] != 0 && nums[j] != 0)
+      else if (nums[i] == 0 && nums[j] == 0)
       {
-        i++;
         j++;
       }
-      else if (nums[j] == 0)
+      else
       {
+        i++;
         j++;
       }
     }
