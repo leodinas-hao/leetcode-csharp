@@ -26,6 +26,19 @@ public class Solution
 {
   public string ReverseWords(string s)
   {
+    var str = "";
+    foreach (var word in s.Split(" "))
+    {
+      str = str + " " + new string(word.Reverse().ToArray());
+    }
+    return str.Trim(); // remove extra space in front
+  }
+}
+
+public class Solution2
+{
+  public string ReverseWords(string s)
+  {
     var ls = new List<string>();
     foreach (var word in s.Split(" "))
     {
