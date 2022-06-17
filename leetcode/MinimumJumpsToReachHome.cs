@@ -50,6 +50,7 @@ public class Solution
     // edge case x is 0
     if (x == 0) return 0;
 
+    // **why the biggest forbidden position is matter to the maximum reach???**
     // farthest to reach is a + b + max(x, forbidden)
     // See: https://leetcode.com/problems/minimum-jumps-to-reach-home/discuss/978357/C%2B%2B-bidirectional-BFS-solution-with-proof-for-search-upper-bound
     int max = a + b + Math.Max(x, forbidden.Max());
@@ -57,7 +58,7 @@ public class Solution
     // assign b direction
     b = b * -1;
 
-    // track a list of positions visited before to avoid revisit
+    // track a list of positions visited before to avoid revisit: (current_pos, next_move[+a|-b])
     var visited = new List<ValueTuple<int, int>>();
     // add all forbidden positions
     foreach (var f in forbidden)
@@ -92,6 +93,7 @@ public class Solution
 
           // try move forward
           queue.Enqueue((pos, a));
+          // only move backward if last step is not backward
           if (jump.Item2 > 0) queue.Enqueue((pos, b));
         }
       }
