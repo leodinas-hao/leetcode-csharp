@@ -32,6 +32,60 @@ There is at least one 0 in mat.
 
 namespace LeetCode.Matrix01;
 
+/*
+dynamic programming (DP)
+update distances of 1's while iterations
+1st check left & top cells; then check bottom & right cells
+*/
+public class Solution2
+{
+  public int[][] UpdateMatrix(int[][] mat)
+  {
+    int rows = mat.Length;
+    int cols = mat[0].Length;
+    int[][] updated = new int[rows][];
+    for (int i = 0; i < rows; i++)
+    {
+      updated[i] = new int[cols];
+      // fill the matrix with MaxValue - 10^4 to avoid overflow
+      Array.Fill(updated[i], Int32.MaxValue - 100000);
+    }
+
+    // check left & top
+    for (int i = 0; i < rows; i++)
+    {
+      for (int j = 0; j < cols; j++)
+      {
+        if (mat[i][j] == 0)
+        {
+          updated[i][j] = 0;
+        }
+        else
+        {
+          if (i > 0) updated[i][j] = Math.Min(updated[i][j], updated[i - 1][j] + 1);
+          if (j > 0) updated[i][j] = Math.Min(updated[i][j], updated[i][j - 1] + 1);
+        }
+      }
+    }
+
+    // check bottom & right
+    for (int i = rows - 1; i >= 0; i--)
+    {
+      for (int j = cols - 1; j >= 0; j--)
+      {
+        if (i < rows - 1) updated[i][j] = Math.Min(updated[i][j], updated[i + 1][j] + 1);
+        if (j < cols - 1) updated[i][j] = Math.Min(updated[i][j], updated[i][j + 1] + 1);
+      }
+    }
+
+    return updated;
+  }
+}
+
+
+/*
+BFS from 0's and update 1's with distance
+*/
 public class Solution
 {
   public int[][] UpdateMatrix(int[][] mat)

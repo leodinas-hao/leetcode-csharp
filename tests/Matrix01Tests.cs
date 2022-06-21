@@ -45,4 +45,18 @@ public class Matrix01Tests
       }
     }
   }
+
+  [Theory]
+  [MemberData(nameof(GetTestData))]
+  public void Test2(int[][] mat, int[][] expect)
+  {
+    var result = new Solution2().UpdateMatrix(mat);
+    for (int i = 0; i < mat.Length; i++)
+    {
+      for (int j = 0; j < mat[0].Length; j++)
+      {
+        Assert.Equal(expect[i][j], result[i][j]);
+      }
+    }
+  }
 }
