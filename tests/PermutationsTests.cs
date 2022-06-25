@@ -43,4 +43,16 @@ public class PermutationsTests
       Assert.Contains(e, result);
     }
   }
+
+  [Theory]
+  [MemberData(nameof(GetTestData))]
+  public void Test2(int[] nums, IList<IList<int>> expect)
+  {
+    var result = new Solution2().Permute(nums);
+    Assert.Equal(expect.Count, result.Count);
+    foreach (var e in expect)
+    {
+      Assert.Contains(e, result);
+    }
+  }
 }

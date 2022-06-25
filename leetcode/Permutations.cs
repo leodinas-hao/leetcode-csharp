@@ -24,6 +24,7 @@ All the integers of nums are unique.
 
 namespace LeetCode.Permutations;
 
+/*recursive backtracking to find all permutations*/
 public class Solution
 {
   private IList<IList<int>> permutes;
@@ -60,5 +61,30 @@ public class Solution
     permutes = new List<IList<int>>();
     GeneratePermute(nums, 0);
     return permutes;
+  }
+}
+
+public class Solution2
+{
+  public IList<IList<int>> Permute(int[] nums)
+  {
+    if (nums.Length > 1)
+    {
+      var permutes = new List<IList<int>>();
+      for (int i = 0; i < nums.Length; i++)
+      {
+        var otherNums = new List<int>(nums.Where(n => n != nums[i])).ToArray();
+        foreach (var others in Permute(otherNums))
+        {
+          others.Add(nums[i]);
+          permutes.Add(others);
+        }
+      }
+      return permutes;
+    }
+    else
+    {
+      return new List<IList<int>> { new List<int>(nums) };
+    }
   }
 }
