@@ -46,7 +46,7 @@ public class TreeNode
   }
 }
 
-/*recursive*/
+/*DFS recursive*/
 public class Solution
 {
   public TreeNode MergeTrees(TreeNode root1, TreeNode root2)
