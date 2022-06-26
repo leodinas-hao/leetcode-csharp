@@ -33,6 +33,7 @@ public class PowerOfTwoTests
   [InlineData(3, false)]
   [InlineData(-1, false)]
   [InlineData(-2, false)]
+  [InlineData(-2147483648, false)]
   public void Test3(int n, bool expect)
   {
     Assert.Equal(expect, new Solution3().IsPowerOfTwo(n));

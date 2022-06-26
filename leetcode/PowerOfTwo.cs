@@ -66,12 +66,13 @@ then n-1 in bitwise would be like:
 16-1 = 15 -> 01111
 
 so bitwise n & (n-1) == 0
-exclude n == 0 as it is not a power of 2
+exclude n <= 0 as they are not a power of 2
 */
 public class Solution3
 {
   public bool IsPowerOfTwo(int n)
   {
-    return n != 0 && ((n & (n - 1)) == 0);
+    if (n <= 0) return false; // remove edge cases
+    return (n & (n - 1)) == 0;
   }
 }
