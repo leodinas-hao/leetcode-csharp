@@ -26,6 +26,9 @@ Constraints:
 
 namespace LeetCode.ClimbingStairs;
 
+/*
+simple DP (dynamic programming)
+*/
 public class Solution
 {
   public int ClimbStairs(int n)
