@@ -54,6 +54,7 @@
 - KeysAndRooms
 - Matrix01
 - MinimumDepthOfBinaryTree
+- MinimumGeneticMutation
 - MinimumJumpsToReachHome
 - NearestExitFromEntranceInMaze
 - OpenTheLock
