@@ -35,20 +35,21 @@
 - SquaresOfASortedArray
 - TwoSumIIInputArrayIsSorted
 
-### DP
+### Dynamic Programming (DP)
 - ClimbingStairs
 - HouseRobber
 - Matrix01
 - Triangle
 - FibonacciNumber
 - NthTribonacciNumber
+- MinCostClimbingStairs
 
 ### Backtracking
 - Combinations
 - LargestTimeForGivenDigits
 - Permutations
 
-### BFS
+### Breadth-First Search (BFS)
 - JumpGameIII
 - KeysAndRooms
 - Matrix01
@@ -65,7 +66,7 @@
 - WaterAndJugProblem
 - WordLadder
 
-### DFS
+### Depth-First Search (DFS)
 - AllPathsFromSourceToTarget
 - CountSubIslands
 - FindEventualSafeStates
