@@ -37,6 +37,7 @@
 
 ### Dynamic Programming (DP)
 - ClimbingStairs
+- DeleteAndEarn
 - HouseRobber
 - HouseRobberII
 - Matrix01
