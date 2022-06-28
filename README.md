@@ -85,6 +85,7 @@
 - NumberOfIslands
 - NumberOfProvinces
 - PacificAtlanticWaterFlow
+- PossibleBipartition
 - ShortestBridge
 - ShortestPathVisitingAllNodes
 - TimeNeededToInformAllEmployees
