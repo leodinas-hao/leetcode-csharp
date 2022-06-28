@@ -74,6 +74,7 @@
 - CountSubIslands
 - FindEventualSafeStates
 - FloodFill
+- IsGraphBipartite
 - LetterCasePermutation
 - MaxAreaOfIsland
 - MaximumDepthOfBinaryTree
