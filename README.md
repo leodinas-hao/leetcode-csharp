@@ -40,6 +40,7 @@
 - DeleteAndEarn
 - HouseRobber
 - HouseRobberII
+- JumpGameII
 - Matrix01
 - Triangle
 - FibonacciNumber
@@ -52,6 +53,7 @@
 - Permutations
 
 ### Breadth-First Search (BFS)
+- JumpGameII
 - JumpGameIII
 - KeysAndRooms
 - Matrix01
