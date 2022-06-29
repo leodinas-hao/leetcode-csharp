@@ -45,6 +45,7 @@
 - Triangle
 - FibonacciNumber
 - NthTribonacciNumber
+- MaximumSubarray
 - MinCostClimbingStairs
 
 ### Backtracking
