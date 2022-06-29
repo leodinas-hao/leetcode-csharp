@@ -43,9 +43,10 @@ public class Solution
     {
       if (nums[i] > 0)
       {
-        // get the min steps possible to get position i
-        var max = Math.Min(len, nums[i] + i + 1);
-        steps[i] = steps[(i + 1)..max].Min() + 1;
+        // get the reachable range
+        Range range = (i + 1)..Math.Min(len, nums[i] + i + 1);
+        // get the min steps within the range
+        steps[i] = steps[range].Min() + 1;
       }
     }
     return steps[0];
