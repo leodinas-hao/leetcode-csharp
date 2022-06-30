@@ -71,7 +71,9 @@ public class Solution2
 
 /*
 DP O(n)
-2 loops: left to right & right to left
+if there are even number of negative digits, then the max product is the product of all
+if there are odd number of negative digits, then the max product is either the product of left elements of the negative or the right elements
+so check product twice, left to right & right to left
 */
 public class Solution3
 {
