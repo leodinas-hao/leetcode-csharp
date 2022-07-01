@@ -36,6 +36,7 @@
 - TwoSumIIInputArrayIsSorted
 
 ### Dynamic Programming (DP)
+- BestSightseeingPair
 - BestTimeToBuyAndSellStock
 - ClimbingStairs
 - DeleteAndEarn
