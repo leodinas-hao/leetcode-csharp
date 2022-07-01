@@ -38,27 +38,27 @@ namespace LeetCode.NumberOfProvinces;
 
 public class Solution
 {
+  private void DFS(int[][] isConnected, int node, HashSet<int> visited)
+  {
+    if (visited.Contains(node)) return;
+    visited.Add(node);
+    for (int i = 0; i < isConnected[node].Length; i++)
+    {
+      if (isConnected[node][i] == 1 && node != i)
+        DFS(isConnected, i, visited);
+    }
+  }
+
   public int FindCircleNum(int[][] isConnected)
   {
     int provinces = 0;
     HashSet<int> visited = new HashSet<int>();
 
-    void dfs(int node)
-    {
-      if (visited.Contains(node)) return;
-      visited.Add(node);
-      for (int i = 0; i < isConnected[node].Length; i++)
-      {
-        if (isConnected[node][i] == 1 && node != i)
-          dfs(i);
-      }
-    }
-
     for (int i = 0; i < isConnected.Length; i++)
     {
       if (!visited.Contains(i))
       {
-        dfs(i);
+        DFS(isConnected, i, visited);
         provinces++;
       }
     }
