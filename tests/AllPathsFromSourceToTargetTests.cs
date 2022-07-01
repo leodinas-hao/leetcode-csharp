@@ -47,4 +47,16 @@ public class AllPathsFromSourceToTargetTests
       Assert.Contains(result, r => Enumerable.SequenceEqual(r, row));
     }
   }
+
+  [Theory]
+  [MemberData(nameof(GetTestData))]
+  public void Test2(int[][] graph, int[][] expect)
+  {
+    var result = new Solution2().AllPathsSourceTarget(graph);
+    Assert.Equal(result.Count, expect.Length);
+    foreach (var row in expect)
+    {
+      Assert.Contains(result, r => Enumerable.SequenceEqual(r, row));
+    }
+  }
 }

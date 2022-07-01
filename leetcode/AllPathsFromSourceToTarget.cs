@@ -6,6 +6,10 @@ Given a directed acyclic graph (DAG) of n nodes labeled from 0 to n - 1, find al
 The graph is given as follows: graph[i] is a list of all nodes you can visit from node i (i.e., there is a directed edge from node i to node graph[i][j]).
 
 Example 1:
+0 -> 1
+|    |
+2 -> 3
+
 Input: graph = [[1,2],[3],[3],[]]
 Output: [[0,1,3],[0,2,3]]
 Explanation: There are two paths: 0 -> 1 -> 3 and 0 -> 2 -> 3.
@@ -48,10 +52,38 @@ public class Solution
       }
     };
 
-    var initPath = new List<int>();
-    initPath.Add(0);
     dfs(0, new int[] { 0 });
 
+    return paths;
+  }
+}
+
+
+/*
+DFS
+*/
+public class Solution2
+{
+  private void Helper(int[][] graph, int i, int[] path, IList<IList<int>> paths)
+  {
+    if (i == graph.Length - 1)
+    {
+      paths.Add(path);
+      return;
+    }
+    foreach (var nei in graph[i])
+    {
+      var clone = new int[path.Length + 1];
+      Array.Copy(path, clone, path.Length);
+      clone[path.Length] = nei;
+      Helper(graph, nei, clone, paths);
+    }
+  }
+
+  public IList<IList<int>> AllPathsSourceTarget(int[][] graph)
+  {
+    var paths = new List<IList<int>>();
+    Helper(graph, 0, new int[] { 0 }, paths);
     return paths;
   }
 }
