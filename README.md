@@ -39,6 +39,7 @@
 - BestSightseeingPair
 - BestTimeToBuyAndSellStock
 - BestTimeToBuyAndSellStockII
+- BestTimeToBuyAndSellStockWithCooldown
 - ClimbingStairs
 - DeleteAndEarn
 - HouseRobber
