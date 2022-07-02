@@ -52,33 +52,29 @@ public class Solution
   }
 }
 
-
-/*
-DP top bottom approach
-Time limit exceeded with this approach
-*/
 public class Solution2
 {
-  private int Helper(int[] prices, int i, bool buy)
-  {
-    int profit = 0;
-    // can't trade after the last, so no profit
-    if (i == prices.Length) return 0;
-    if (buy)
-    {
-      // (buy && no need to buy next day) || (don't buy && buy next day)
-      profit += Math.Max(-prices[i] + Helper(prices, i + 1, false), Helper(prices, i + 1, true));
-    }
-    else
-    {
-      // (sell && buy next day) || (don't sell && don't buy next day)
-      profit += Math.Max(prices[i] + Helper(prices, i + 1, true), Helper(prices, i + 1, false));
-    }
-    return profit;
-  }
-
   public int MaxProfit(int[] prices)
   {
-    return Helper(prices, 0, true);
+    if (prices.Length <= 1) return 0;
+
+    int[] profit = new int[prices.Length];
+    profit[0] = 0;  // buy stock 1st day
+    profit[1] = Math.Max(0, prices[1] - prices[0]); // sell stock 2nd day if price is higher
+
+    for (int i = 2; i < prices.Length; i++)
+    {
+      // if not selling on day i, profit remains as last day
+      profit[i] = profit[i - 1];
+
+      // if day i is selling, then try to find a best buying day between [0, i-1]
+      for (int j = 0; j < i; j++)
+      {
+        int preProfit = j >= 1 ? profit[j - 1] : 0;
+        profit[i] = Math.Max(profit[i], preProfit + prices[i] - prices[j]);
+      }
+    }
+
+    return profit[^1];
   }
 }
