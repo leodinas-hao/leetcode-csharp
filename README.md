@@ -33,6 +33,7 @@
 - RemoveNthNodeFromEndOfList
 - RotateArray
 - SquaresOfASortedArray
+- TrappingRainWater
 - TwoSumIIInputArrayIsSorted
 
 ### Dynamic Programming (DP)
@@ -47,6 +48,7 @@
 - HouseRobberII
 - JumpGameII
 - Matrix01
+- TrappingRainWater
 - Triangle
 - FibonacciNumber
 - NthTribonacciNumber
