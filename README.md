@@ -53,6 +53,7 @@
 - MaximumProductSubarray
 - MaximumSubarray
 - MinCostClimbingStairs
+- WordBreak
 
 ### Backtracking
 - Combinations
