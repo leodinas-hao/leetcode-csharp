@@ -37,6 +37,7 @@
 - TwoSumIIInputArrayIsSorted
 
 ### Dynamic Programming (DP)
+- ArithmeticSlices
 - BestSightseeingPair
 - BestTimeToBuyAndSellStock
 - BestTimeToBuyAndSellStockII
