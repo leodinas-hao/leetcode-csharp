@@ -103,7 +103,9 @@ public class Solution3
     int ans = 0;
     for (int i = 0; i < height.Length; i++)
     {
+      // check highest point between the start to ith point(inclusive)
       int leftMax = height[..(i + 1)].Max();
+      // check highest point between ith point(inclusive) to the end
       int rightMax = height[i..].Max();
       ans += (Math.Min(leftMax, rightMax) - height[i]);
     }
