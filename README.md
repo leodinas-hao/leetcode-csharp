@@ -44,6 +44,7 @@
 - BestTimeToBuyAndSellStockWithCooldown
 - BestTimeToBuyAndSellStockWithTransactionFee
 - ClimbingStairs
+- DecodeWays
 - DeleteAndEarn
 - HouseRobber
 - HouseRobberII
@@ -112,3 +113,4 @@
 
 * https://leetcode.com/problemset/all/
 * https://leetcode.com/discuss/interview-question/398023/Microsoft-Online-Assessment-Questions
+* https://algodaily.com/companies/microsoft
