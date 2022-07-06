@@ -54,6 +54,7 @@
 - TrappingRainWater
 - Triangle
 - UglyNumberII
+- UniqueBinarySearchTrees
 - MaximumProductSubarray
 - MaximumSubarray
 - MinCostClimbingStairs
