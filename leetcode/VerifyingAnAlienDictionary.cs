@@ -33,6 +33,11 @@ All characters in words[i] and order are English lowercase letters.
 
 namespace LeetCode.VerifyingAnAlienDictionary;
 
+/*
+this is more like a practice of custom comparer
+just to solve the question if the list is in order, no need a full comparer
+*/
+
 class AlienComparer : Comparer<string>
 {
   private char[] map;
