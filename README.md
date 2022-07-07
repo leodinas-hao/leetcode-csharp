@@ -51,6 +51,7 @@
 - HouseRobberII
 - JumpGameII
 - Matrix01
+- PascalTriangle
 - TrappingRainWater
 - Triangle
 - UglyNumberII
