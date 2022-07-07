@@ -52,6 +52,7 @@
 - JumpGameII
 - Matrix01
 - PascalTriangle
+- PascalTriangleII
 - TrappingRainWater
 - Triangle
 - UglyNumberII
