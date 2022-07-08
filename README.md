@@ -60,6 +60,7 @@
 - MaximumProductSubarray
 - MaximumSubarray
 - MinCostClimbingStairs
+- MinimumFallingPathSum
 - NthTribonacciNumber
 - WordBreak
 
