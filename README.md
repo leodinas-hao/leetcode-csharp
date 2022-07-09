@@ -50,18 +50,19 @@
 - HouseRobber
 - HouseRobberII
 - JumpGameII
-- Matrix01
-- PascalTriangle
-- PascalTriangleII
-- TrappingRainWater
-- Triangle
 - UglyNumberII
 - UniqueBinarySearchTrees
+- Matrix01
 - MaximumProductSubarray
 - MaximumSubarray
 - MinCostClimbingStairs
 - MinimumFallingPathSum
 - NthTribonacciNumber
+- PascalTriangle
+- PascalTriangleII
+- RangeSumQuery2DImmutable
+- TrappingRainWater
+- Triangle
 - WordBreak
 
 ### Backtracking
