@@ -53,6 +53,7 @@
 - UglyNumberII
 - UniqueBinarySearchTrees
 - Matrix01
+- MatrixBlockSum
 - MaximumProductSubarray
 - MaximumSubarray
 - MinCostClimbingStairs
