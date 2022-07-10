@@ -64,6 +64,7 @@
 - RangeSumQuery2DImmutable
 - TrappingRainWater
 - Triangle
+- UniquePaths
 - WordBreak
 
 ### Backtracking
