@@ -58,6 +58,7 @@
 - MaximumSubarray
 - MinCostClimbingStairs
 - MinimumFallingPathSum
+- MinimumPathSum
 - NthTribonacciNumber
 - PascalTriangle
 - PascalTriangleII
