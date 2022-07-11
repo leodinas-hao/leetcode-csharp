@@ -54,6 +54,7 @@
 - UniqueBinarySearchTrees
 - Matrix01
 - MatrixBlockSum
+- MaximalSquare
 - MaximumProductSubarray
 - MaximumSubarray
 - MinCostClimbingStairs
