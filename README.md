@@ -50,6 +50,7 @@
 - HouseRobber
 - HouseRobberII
 - JumpGameII
+- LongestIncreasingSubsequence
 - LongestPalindromicSubsequence
 - LongestPalindromicSubstring
 - UniqueBinarySearchTrees
