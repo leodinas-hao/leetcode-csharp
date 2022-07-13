@@ -50,7 +50,7 @@
 - HouseRobber
 - HouseRobberII
 - JumpGameII
-- UglyNumberII
+- LongestPalindromicSubstring
 - UniqueBinarySearchTrees
 - Matrix01
 - MatrixBlockSum
@@ -66,6 +66,7 @@
 - RangeSumQuery2DImmutable
 - TrappingRainWater
 - Triangle
+- UglyNumberII
 - UniquePaths
 - UniquePathsII
 - WordBreak
