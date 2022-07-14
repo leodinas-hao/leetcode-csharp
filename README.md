@@ -50,6 +50,7 @@
 - HouseRobber
 - HouseRobberII
 - JumpGameII
+- LongestCommonSubsequence
 - LongestIncreasingSubsequence
 - LongestPalindromicSubsequence
 - LongestPalindromicSubstring
