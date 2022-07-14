@@ -46,6 +46,7 @@
 - ClimbingStairs
 - DecodeWays
 - DeleteAndEarn
+- EditDistance
 - FibonacciNumber
 - HouseRobber
 - HouseRobberII
