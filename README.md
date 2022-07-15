@@ -69,6 +69,7 @@
 - NthTribonacciNumber
 - PascalTriangle
 - PascalTriangleII
+- PerfectSquares
 - RangeSumQuery2DImmutable
 - TrappingRainWater
 - Triangle
@@ -93,6 +94,7 @@
 - MinimumJumpsToReachHome
 - NearestExitFromEntranceInMaze
 - OpenTheLock
+- PerfectSquares
 - ReorderRoutesToMakeAllPathsLeadToTheCityZero
 - RottingOranges
 - ShortestBridge
