@@ -44,6 +44,7 @@
 - BestTimeToBuyAndSellStockWithCooldown
 - BestTimeToBuyAndSellStockWithTransactionFee
 - ClimbingStairs
+- CoinChange
 - DecodeWays
 - DeleteAndEarn
 - EditDistance
