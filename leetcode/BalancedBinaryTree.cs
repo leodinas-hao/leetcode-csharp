@@ -77,8 +77,11 @@ public class Solution2
 
     int left = Check(node.left);
     int right = Check(node.right);
+
+    // try to get non-balanced return early
     if (left == -1 || right == -1) return -1;
     if (Math.Abs(left - right) > 1) return -1;
+
     return Math.Max(left, right) + 1;
   }
 
