@@ -107,6 +107,7 @@
 
 ### Depth-First Search (DFS)
 - AllPathsFromSourceToTarget
+- BalancedBinaryTree
 - CountSubIslands
 - FindEventualSafeStates
 - FloodFill
