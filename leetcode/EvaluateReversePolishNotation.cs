@@ -46,8 +46,10 @@ public class Solution
       // check if operators: +, -, *, /
       if (tokens[i] == "+" || tokens[i] == "-" || tokens[i] == "*" || tokens[i] == "/")
       {
+        // pop operands for calculation
         var operand2 = operands.Pop();
         var operand1 = operands.Pop();
+        // calculate the result and push the result to the stack
         switch (tokens[i])
         {
           case "+":
@@ -66,7 +68,7 @@ public class Solution
       }
       else
       {
-        // push in number/operand
+        // push in operand
         operands.Push(int.Parse(tokens[i]));
       }
     }
