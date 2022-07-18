@@ -113,6 +113,7 @@
 - FloodFill
 - IsGraphBipartite
 - LetterCasePermutation
+- LinkedListInBinaryTree
 - MaxAreaOfIsland
 - MaximumDepthOfBinaryTree
 - MergeTwoBinaryTrees
