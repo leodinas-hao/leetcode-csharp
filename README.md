@@ -17,6 +17,7 @@
 - FindMinimumInRotatedSortedArray
 - FindSmallestLetterGreaterThanTarget
 - FindTheDistanceValueBetweenTwoArrays
+- KClosestPointsToOrigin
 - KDiffPairsInAnArray
 - MaximumDistanceBetweenAPairOfValues
 - Search2DMatrix
