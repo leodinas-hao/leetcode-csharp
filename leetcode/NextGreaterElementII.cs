@@ -79,3 +79,28 @@ public class Solution2
     return result;
   }
 }
+
+/*
+similar to Solution2, just iterating the array forward (instead of backward)
+*/
+public class Solution3
+{
+  public int[] NextGreaterElements(int[] nums)
+  {
+    var result = new int[nums.Length];
+    Array.Fill(result, -1);
+    var stack = new Stack<int>();
+    for (int i = 0; i < nums.Length * 2 - 1; i++)
+    {
+      int index = i % nums.Length;
+      while (stack.Any() && nums[stack.Peek()] < nums[index])
+      {
+        // pop the stack as the top element is less than the current element & update the result array
+        result[stack.Pop()] = nums[index];
+      }
+      stack.Push(index);
+    }
+
+    return result;
+  }
+}

@@ -34,10 +34,9 @@ public class Solution
     Stack<int> stack = new Stack<int>();
     for (int today = 0; today < len; today++)
     {
-      int temp = temperatures[today];
       // pop until the current day's temperature is lower
       // than the temperature at the top of the stack
-      while (stack.Any() && temperatures[stack.Peek()] < temp)
+      while (stack.Any() && temperatures[stack.Peek()] < temperatures[today])
       {
         // today's temperature is higher than the previous day
         int prevDay = stack.Pop();
