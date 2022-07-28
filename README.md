@@ -24,6 +24,7 @@
 - SearchInRotatedSortedArray
 - SpecialArrayWithXElementsGreaterThanOrEqualX
 - SplitArrayLargestSum
+- SubarrayProductLessThanK
 - SumOfSquareNumbers
 - TwoSumIIInputArrayIsSorted
 
