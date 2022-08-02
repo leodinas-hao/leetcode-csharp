@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <IsPackable>false</IsPackable>
-    <NoWarn>xUnit2017,xUnit2000,8603,8604,8629</NoWarn>
+    <NoWarn>xUnit2017,xUnit2000,xUnit2004,8603,8604,8629</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
