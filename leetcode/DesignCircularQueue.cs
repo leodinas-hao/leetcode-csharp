@@ -63,20 +63,22 @@ namespace LeetCode.DesignCircularQueue;
 public class MyCircularQueue
 {
   private int[] queue;
-  private int index = 0;  // track next available position
+  private int head, tail, size, capacity;
 
   public MyCircularQueue(int k)
   {
     queue = new int[k];
-    Array.Fill(queue, -1);
+    capacity = k;
+    tail = -1;
   }
 
   public bool EnQueue(int value)
   {
     if (IsFull()) return false;
 
-    queue[index] = value;
-    index++;
+    tail = (tail + 1) % capacity;
+    queue[tail] = value;
+    size++;
     return true;
   }
 
@@ -84,35 +86,28 @@ public class MyCircularQueue
   {
     if (IsEmpty()) return false;
 
-    // remove the first element from the queue 
-    // by moving all following elements a step ahead
-    for (int i = 0; i < index - 1; i++)
-    {
-      queue[i] = queue[i + 1];
-    }
-    index--;
+    head = (head + 1) % capacity;
+    size--;
     return true;
   }
 
   public int Front()
   {
-    if (IsEmpty()) return -1;
-    return queue[0];
+    return IsEmpty() ? -1 : queue[head];
   }
 
   public int Rear()
   {
-    if (IsEmpty()) return -1;
-    return queue[index - 1];
+    return IsEmpty() ? -1 : queue[tail];
   }
 
   public bool IsEmpty()
   {
-    return index == 0;
+    return size == 0;
   }
 
   public bool IsFull()
   {
-    return index == queue.Length;
+    return size == capacity;
   }
 }
