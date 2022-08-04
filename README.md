@@ -15,6 +15,7 @@
 - CountNegativeNumbersInASortedMatrix
 - FindFirstAndLastPositionOfElementInSortedArray
 - FindMinimumInRotatedSortedArray
+- FindPeakElement
 - FindSmallestLetterGreaterThanTarget
 - FindTheDistanceValueBetweenTwoArrays
 - KClosestPointsToOrigin
