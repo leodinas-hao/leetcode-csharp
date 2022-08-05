@@ -33,6 +33,7 @@
 - IntersectionOfTwoArraysII
 - MaximumDistanceBetweenAPairOfValues
 - MoveZeroes
+- RemoveDuplicatesFromSortedListII
 - RemoveNthNodeFromEndOfList
 - RotateArray
 - SquaresOfASortedArray
