@@ -31,6 +31,7 @@
 
 ### Two Pointers
 - BackspaceStringCompare
+- ContainerWithMostWater
 - IntersectionOfTwoArraysII
 - MaximumDistanceBetweenAPairOfValues
 - MoveZeroes
