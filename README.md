@@ -30,6 +30,7 @@
 - TwoSumIIInputArrayIsSorted
 
 ### Two Pointers
+- BackspaceStringCompare
 - IntersectionOfTwoArraysII
 - MaximumDistanceBetweenAPairOfValues
 - MoveZeroes
