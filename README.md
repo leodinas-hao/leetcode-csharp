@@ -33,6 +33,7 @@
 - BackspaceStringCompare
 - ContainerWithMostWater
 - IntersectionOfTwoArraysII
+- IntervalListIntersections
 - MaximumDistanceBetweenAPairOfValues
 - MoveZeroes
 - RemoveDuplicatesFromSortedListII
