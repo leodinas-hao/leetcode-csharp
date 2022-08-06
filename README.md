@@ -35,6 +35,7 @@
 - IntersectionOfTwoArraysII
 - IntervalListIntersections
 - MaximumDistanceBetweenAPairOfValues
+- MinimumSizeSubarraySum
 - MoveZeroes
 - RemoveDuplicatesFromSortedListII
 - RemoveNthNodeFromEndOfList
