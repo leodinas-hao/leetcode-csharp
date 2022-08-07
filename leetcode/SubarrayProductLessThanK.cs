@@ -24,7 +24,7 @@ Constraints:
 namespace LeetCode.SubarrayProductLessThanK;
 
 /*
-sliding window
+sliding window/two pointers
 */
 public class Solution
 {
