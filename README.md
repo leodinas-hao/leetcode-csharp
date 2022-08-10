@@ -138,6 +138,7 @@
 - ShortestBridge
 - ShortestPathVisitingAllNodes
 - SubtreeOfAnotherTree
+- SurroundedRegions
 - TimeNeededToInformAllEmployees
 
 ### ??
