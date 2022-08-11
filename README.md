@@ -8,6 +8,7 @@
 - PowerOfTwo
 - ReverseBits
 - SingleNumber
+- Subsets
 
 ### Binary Search
 - ArrangingCoins
@@ -94,6 +95,7 @@
 - Combinations
 - LargestTimeForGivenDigits
 - Permutations
+- Subsets
 
 ### Breadth-First Search (BFS)
 - JumpGameII
