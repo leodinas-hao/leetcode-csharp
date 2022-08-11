@@ -9,6 +9,7 @@
 - ReverseBits
 - SingleNumber
 - Subsets
+- SubsetsII
 
 ### Binary Search
 - ArrangingCoins
@@ -96,6 +97,7 @@
 - LargestTimeForGivenDigits
 - Permutations
 - Subsets
+- SubsetsII
 
 ### Breadth-First Search (BFS)
 - JumpGameII
