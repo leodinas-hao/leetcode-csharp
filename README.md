@@ -96,6 +96,7 @@
 - Combinations
 - LargestTimeForGivenDigits
 - Permutations
+- PermutationsII
 - Subsets
 - SubsetsII
 
