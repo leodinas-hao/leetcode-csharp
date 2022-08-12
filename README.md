@@ -94,6 +94,7 @@
 
 ### Backtracking
 - Combinations
+- CombinationSum
 - LargestTimeForGivenDigits
 - Permutations
 - PermutationsII
