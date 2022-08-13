@@ -149,6 +149,7 @@
 - SubtreeOfAnotherTree
 - SurroundedRegions
 - TimeNeededToInformAllEmployees
+- WordSearch
 
 ### ??
 - NumberOfOperationsToMakeNetworkConnected
