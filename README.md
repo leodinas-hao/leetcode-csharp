@@ -128,6 +128,7 @@
 - CountSubIslands
 - FindEventualSafeStates
 - FloodFill
+- GenerateParentheses
 - IsGraphBipartite
 - LetterCasePermutation
 - LetterCombinationsOfAPhoneNumber
