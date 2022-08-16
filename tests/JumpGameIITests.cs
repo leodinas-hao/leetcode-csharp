@@ -21,4 +21,13 @@ public class JumpGameIITests
   {
     Assert.Equal(expect, new Solution2().Jump(nums));
   }
+
+  [Theory]
+  [InlineData(new int[] { 2, 3, 1, 1, 4 }, 2)]
+  [InlineData(new int[] { 2, 3, 0, 1, 4 }, 2)]
+  [InlineData(new int[] { 5, 9, 3, 2, 1, 0, 2, 3, 3, 1, 0, 0 }, 3)]
+  public void Test3(int[] nums, int expect)
+  {
+    Assert.Equal(expect, new Solution3().Jump(nums));
+  }
 }

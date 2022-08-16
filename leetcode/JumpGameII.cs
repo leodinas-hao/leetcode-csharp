@@ -88,3 +88,30 @@ public class Solution2
     return count;
   }
 }
+
+
+/*
+DP
+starting from first index and moving alone the array to check the minimum steps taken
+*/
+public class Solution3
+{
+  public int Jump(int[] nums)
+  {
+    int len = nums.Length;
+    var dp = new int[len];
+    // base case
+    dp[0] = 0;
+
+    for (int i = 0; i < len; i++)
+    {
+      // update all the index moving forward based on the current max step value
+      for (int j = i + 1; j <= nums[i] + i; j++)
+      {
+        if (j < len && dp[j] == 0) dp[j] = dp[i] + 1;
+      }
+    }
+
+    return dp[^1];
+  }
+}
