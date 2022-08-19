@@ -4,6 +4,7 @@
 ## index
 
 ### Bitwise
+- BitwiseAndOfNumbersRange
 - NumberOfOneBits
 - PowerOfTwo
 - ReverseBits
