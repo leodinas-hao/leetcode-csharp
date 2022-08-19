@@ -80,6 +80,7 @@
 - MinimumFallingPathSum
 - MinimumPathSum
 - NthTribonacciNumber
+- NumberOfLongestIncreasingSubsequence
 - PascalTriangle
 - PascalTriangleII
 - PerfectSquares
