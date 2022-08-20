@@ -29,16 +29,16 @@ public class Solution
     if (n == 3) return 2;
 
     int quotient = n / 3;
-    int reminder = n % 3;
-    if (reminder == 0)
+    int remainder = n % 3;
+    if (remainder == 0)
       // (3^quotient)
       return (int)Math.Pow(3, quotient);
-    else if (reminder == 1)
-      // (3^(quotient-1))*(reminder+3)
-      return (int)Math.Pow(3, (quotient - 1)) * (reminder + 3);
-    else // reminder as 2
-      // (3^quotient)*reminder
-      return (int)Math.Pow(3, quotient) * reminder;
+    else if (remainder == 1)
+      // (3^(quotient-1))*(remainder+3)
+      return (int)Math.Pow(3, (quotient - 1)) * (remainder + 3);
+    else // remainder as 2
+      // (3^quotient)*remainder
+      return (int)Math.Pow(3, quotient) * remainder;
   }
 }
 

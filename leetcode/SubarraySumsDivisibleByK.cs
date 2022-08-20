@@ -28,7 +28,7 @@ public class Solution
   public int SubarraysDivByK(int[] nums, int k)
   {
     int count = 0, sum = 0, remainder = 0;
-    // dict to capture the reminders and associated number of occurrences
+    // dict to capture the remainder and associated number of occurrences
     // the idea behind this is when a % k = x && (a+b) % k = x then b is divisible by k
     var dict = new Dictionary<int, int>();
     dict.Add(0, 1);
