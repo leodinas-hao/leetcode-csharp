@@ -19,11 +19,14 @@ Constraints:
 
 namespace LeetCode.SumOfSquareNumbers;
 
+/*
+binary search to find if the square root is an integer
+*/
 public class Solution
 {
   private bool Search(long lo, long hi, long target)
   {
-    // binary search to see if a number's square equals to the target
+    // binary search to see if the target has an integer square root
     if (lo > hi)
     {
       return false; // reached the high end, stop search
@@ -42,8 +45,28 @@ public class Solution
     {
       // calculate the b value
       long b = c - (a * a);
-      // binary search if a number square equals b
+      // binary search if b has an integer sqrt
       if (Search(0, b, b)) return true;
+    }
+    return false;
+  }
+}
+
+/*
+using `sqrt` function
+*/
+public class Solution2
+{
+  public bool JudgeSquareSum(int c)
+  {
+    // consider c = a * a + b * b
+    // iterate from 0 to a number square, which less than c
+    for (long a = 0; a * a <= c; a++)
+    {
+      // calculate the b value
+      double b = Math.Sqrt(c - (a * a));
+      // check if b is integer
+      if (b == (int)b) return true;
     }
     return false;
   }
