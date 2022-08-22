@@ -22,6 +22,24 @@ Constraints:
 
 namespace LeetCode.BitwiseAndOfNumbersRange;
 
+/*
+consider the case the following cases as example
+    i =    1     2
+4 (100) >> 10 >> 1
+5 (101) >> 10 >> 1
+6 (110) >> 11 >> 1
+---------------------------------
+100 & 101 & 110 = 100 = (1 << 2)
+
+    i =    1     2
+2 (010) >> 01 >> 0
+3 (011) >> 01 >> 0
+4 (100) >> 10 >> 1
+--------------------------------
+010 & 011 & 100 = 0 = (0 << 2)
+
+as such, the final output can only be 0 or a power of 2 (10, 100, etc.)
+*/
 public class Solution
 {
   public int RangeBitwiseAnd(int left, int right)
