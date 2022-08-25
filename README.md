@@ -31,6 +31,7 @@
 - SubarrayProductLessThanK
 - SumOfSquareNumbers
 - TwoSumIIInputArrayIsSorted
+- ValidTriangleNumber
 
 ### Two Pointers
 - BackspaceStringCompare
