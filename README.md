@@ -22,6 +22,7 @@
 - FindSmallestLetterGreaterThanTarget
 - FindTheDistanceValueBetweenTwoArrays
 - KClosestPointsToOrigin
+- KokoEatingBananas
 - KDiffPairsInAnArray
 - MaximumDistanceBetweenAPairOfValues
 - MinimumLimitOfBallsInABag
