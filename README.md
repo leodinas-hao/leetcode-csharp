@@ -24,6 +24,7 @@
 - KClosestPointsToOrigin
 - KDiffPairsInAnArray
 - MaximumDistanceBetweenAPairOfValues
+- MinimumLimitOfBallsInABag
 - Search2DMatrix
 - SearchInRotatedSortedArray
 - SpecialArrayWithXElementsGreaterThanOrEqualX
