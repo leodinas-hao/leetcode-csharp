@@ -24,6 +24,7 @@
 - KClosestPointsToOrigin
 - KokoEatingBananas
 - KDiffPairsInAnArray
+- MagneticForceBetweenTwoBalls
 - MaximumDistanceBetweenAPairOfValues
 - MinimumLimitOfBallsInABag
 - Search2DMatrix
