@@ -22,6 +22,7 @@
 - FindSmallestLetterGreaterThanTarget
 - FindTheDistanceValueBetweenTwoArrays
 - FindTheDuplicateNumber
+- FindTheSmallestDivisorGivenAThreshold
 - KClosestPointsToOrigin
 - KokoEatingBananas
 - KDiffPairsInAnArray
