@@ -21,6 +21,7 @@
 - FindPeakElement
 - FindSmallestLetterGreaterThanTarget
 - FindTheDistanceValueBetweenTwoArrays
+- FindTheDuplicateNumber
 - KClosestPointsToOrigin
 - KokoEatingBananas
 - KDiffPairsInAnArray
