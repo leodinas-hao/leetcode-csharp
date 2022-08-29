@@ -28,6 +28,7 @@
 - KDiffPairsInAnArray
 - MagneticForceBetweenTwoBalls
 - MaximumDistanceBetweenAPairOfValues
+- MaximumNumberOfRemovableCharacters
 - MinimumLimitOfBallsInABag
 - Search2DMatrix
 - SearchInRotatedSortedArray
