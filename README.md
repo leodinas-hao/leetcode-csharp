@@ -75,6 +75,7 @@
 - DeleteOperationForTwoStrings
 - EditDistance
 - FibonacciNumber
+- HIndexII
 - HouseRobber
 - HouseRobberII
 - JumpGameII
