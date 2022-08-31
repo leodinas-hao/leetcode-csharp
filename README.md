@@ -29,6 +29,7 @@
 - MagneticForceBetweenTwoBalls
 - MaximumDistanceBetweenAPairOfValues
 - MaximumNumberOfRemovableCharacters
+- MinimumAbsoluteSumDifference
 - MinimumLimitOfBallsInABag
 - MinimumNumberOfDaysToMakeMBouquets
 - MinimumSpeedToArriveOnTime
