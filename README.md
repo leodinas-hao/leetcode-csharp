@@ -30,6 +30,7 @@
 - MaximumDistanceBetweenAPairOfValues
 - MaximumNumberOfRemovableCharacters
 - MinimumLimitOfBallsInABag
+- MinimumNumberOfDaysToMakeMBouquets
 - MinimumSpeedToArriveOnTime
 - Search2DMatrix
 - SearchInRotatedSortedArray
