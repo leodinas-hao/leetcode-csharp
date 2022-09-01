@@ -46,6 +46,7 @@
 ### Two Pointers
 - BackspaceStringCompare
 - ContainerWithMostWater
+- FrequencyOfTheMostFrequentElement
 - IntersectionOfTwoArraysII
 - IntervalListIntersections
 - MaximumDistanceBetweenAPairOfValues

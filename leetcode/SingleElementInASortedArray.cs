@@ -15,8 +15,8 @@ Input: nums = [3,3,7,7,10,11,11]
 Output: 10
 
 Constraints:
-1 <= nums.length <= 105
-0 <= nums[i] <= 105
+1 <= nums.length <= 10^5
+0 <= nums[i] <= 10^5
 */
 
 namespace LeetCode.SingleElementInASortedArray;
