@@ -119,6 +119,7 @@
 - SubsetsII
 
 ### Breadth-First Search (BFS)
+- CountCompleteTreeNodes
 - JumpGameII
 - JumpGameIII
 - KeysAndRooms
