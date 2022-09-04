@@ -42,6 +42,7 @@
 - SumOfSquareNumbers
 - TwoSumIIInputArrayIsSorted
 - ValidTriangleNumber
+- WaysToSplitArrayIntoThreeSubarrays
 
 ### Two Pointers
 - BackspaceStringCompare
