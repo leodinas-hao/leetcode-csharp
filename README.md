@@ -19,6 +19,7 @@
 - FindFirstAndLastPositionOfElementInSortedArray
 - FindMinimumInRotatedSortedArray
 - FindPeakElement
+- FindRightInterval
 - FindSmallestLetterGreaterThanTarget
 - FindTheDistanceValueBetweenTwoArrays
 - FindTheDuplicateNumber
