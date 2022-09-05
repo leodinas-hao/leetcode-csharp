@@ -36,6 +36,7 @@
 - MinimumSpeedToArriveOnTime
 - Search2DMatrix
 - SearchInRotatedSortedArray
+- SearchInRotatedSortedArrayII
 - SingleElementInASortedArray
 - SpecialArrayWithXElementsGreaterThanOrEqualX
 - SplitArrayLargestSum
