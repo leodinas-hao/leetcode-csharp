@@ -35,6 +35,7 @@
 - MinimumLimitOfBallsInABag
 - MinimumNumberOfDaysToMakeMBouquets
 - MinimumSpeedToArriveOnTime
+- RandomPickWithWeight
 - Search2DMatrix
 - SearchInRotatedSortedArray
 - SearchInRotatedSortedArrayII
