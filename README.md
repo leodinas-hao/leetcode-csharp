@@ -18,6 +18,7 @@
 - CountNegativeNumbersInASortedMatrix
 - FindFirstAndLastPositionOfElementInSortedArray
 - FindMinimumInRotatedSortedArray
+- FindMinimumInRotatedSortedArrayII
 - FindPeakElement
 - FindRightInterval
 - FindSmallestLetterGreaterThanTarget
