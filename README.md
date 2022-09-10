@@ -44,6 +44,7 @@
 - SpecialArrayWithXElementsGreaterThanOrEqualX
 - SplitArrayLargestSum
 - SubarrayProductLessThanK
+- SumOfMutatedArrayClosestToTarget
 - SumOfSquareNumbers
 - TimeBasedKeyValueStore
 - TwoSumIIInputArrayIsSorted
