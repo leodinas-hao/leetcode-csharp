@@ -32,6 +32,7 @@
 - MaximumDistanceBetweenAPairOfValues
 - MaximumNumberOfRemovableCharacters
 - MaximumSideLengthOfASquareWithSumLessThanOrEqualToThreshold
+- MaximumValueAtAGivenIndexInABoundedArray
 - MinimumAbsoluteSumDifference
 - MinimumLimitOfBallsInABag
 - MinimumNumberOfDaysToMakeMBouquets
