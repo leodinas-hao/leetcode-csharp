@@ -34,7 +34,7 @@ public class FindAPeakElementIITests
   public void Test1(int[][] mat, int[][] expect)
   {
     var result = new Solution().FindPeakGrid(mat);
-    Assert.True(expect.Any((e) => e[0] == result[0] && e[1] == result[1]));
+    Assert.Contains(result, expect);
   }
 
   [Theory]
@@ -42,6 +42,6 @@ public class FindAPeakElementIITests
   public void Test2(int[][] mat, int[][] expect)
   {
     var result = new Solution2().FindPeakGrid(mat);
-    Assert.True(expect.Any((e) => e[0] == result[0] && e[1] == result[1]));
+    Assert.Contains(result, expect);
   }
 }
