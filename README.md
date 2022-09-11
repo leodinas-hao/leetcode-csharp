@@ -16,6 +16,7 @@
 - ArrangingCoins
 - CheckIfNAndItsDoubleExist
 - CountNegativeNumbersInASortedMatrix
+- FindAPeakElementII
 - FindFirstAndLastPositionOfElementInSortedArray
 - FindMinimumInRotatedSortedArray
 - FindMinimumInRotatedSortedArrayII
