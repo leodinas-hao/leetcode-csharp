@@ -14,6 +14,7 @@
 
 ### Binary Search
 - ArrangingCoins
+- AvoidFloodInTheCity
 - CheckIfNAndItsDoubleExist
 - CountNegativeNumbersInASortedMatrix
 - FindAPeakElementII
