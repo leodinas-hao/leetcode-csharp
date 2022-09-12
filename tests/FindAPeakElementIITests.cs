@@ -1,6 +1,6 @@
 using LeetCode.FindAPeakElementII;
 
-namespace test;
+namespace tests;
 
 public class FindAPeakElementIITests
 {
