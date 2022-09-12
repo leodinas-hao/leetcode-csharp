@@ -41,7 +41,105 @@ All integers in arr are distinct.
 namespace LeetCode.FindLatestGroupOfSizeM;
 
 
+public class Solution0
+{
+  public int FindLatestStep(int[] arr, int m)
+  {
+    int n = arr.Length;
+    if (m == n) return n;
+
+    int ans = -1;
+
+    // dict to store start & end index of 1's
+    // add {startIndex,endIndex} to head, and {endIndex,startIndex} to tail
+    Dictionary<int, int> head = new Dictionary<int, int>();
+    Dictionary<int, int> tail = new Dictionary<int, int>();
+
+    for (int i = 0; i < n; i++)
+    {
+      //arr[i] connect 2 string, merge then : end at arr[i]-1 and start at arr[i]+1
+      if (head.ContainsKey(arr[i] + 1) && tail.ContainsKey(arr[i] - 1))
+      {
+        var start1 = tail[arr[i] - 1];
+        var end1 = arr[i] - 1;
+        var start2 = arr[i] + 1;
+        var end2 = head[arr[i] + 1];
+
+        tail.Remove(head[arr[i] + 1]);
+        head.Remove(tail[arr[i] - 1]);
+        head.Remove(arr[i] + 1);
+        tail.Remove(arr[i] - 1);
+
+        head.Add(start1, end2);
+        tail.Add(end2, start1);
+
+        if (end1 - start1 + 1 == m) ans = i;
+        if (end2 - start2 + 1 == m) ans = i;
+      }
+      //merge arr[i] with string start at arr[i]+1
+      else if (head.ContainsKey(arr[i] + 1))
+      {
+        var start2 = arr[i] + 1;
+        var end2 = head[arr[i] + 1];
+
+        tail.Remove(head[arr[i] + 1]);
+        head.Remove(arr[i] + 1);
+
+        head.Add(arr[i], end2);
+        tail.Add(end2, arr[i]);
+
+        if (end2 - start2 + 1 == m) ans = i;
+      }
+      //merge arr[i] with string end at arr[i]-1
+      else if (tail.ContainsKey(arr[i] - 1))
+      {
+        var start1 = tail[arr[i] - 1];
+        var end1 = arr[i] - 1;
+
+        head.Remove(tail[arr[i] - 1]);
+        tail.Remove(arr[i] - 1);
+
+        tail.Add(arr[i], start1);
+        head.Add(start1, arr[i]);
+
+        if (end1 - start1 + 1 == m) ans = i;
+      }
+      else
+      {
+        head.Add(arr[i], arr[i]);
+        tail.Add(arr[i], arr[i]);
+      }
+    }
+
+    return ans;
+  }
+}
+
 public class Solution
+{
+  public int FindLatestStep(int[] arr, int m)
+  {
+    int n = arr.Length;
+    if (m == n) return n;
+
+    int[] ranges = new int[n + 2];
+    int ans = -1;
+
+    for (int i = 0; i < n; i++)
+    {
+      int left = arr[i], right = arr[i];
+      if (ranges[left - 1] > 0) left = ranges[left - 1];
+      if (ranges[right + 1] > 0) right = ranges[right + 1];
+      ranges[left] = right;
+      ranges[right] = left;
+      if (right - arr[i] == m || arr[i] - left == m) ans = i;
+    }
+    return ans;
+  }
+}
+
+
+public class Solution1
 {
   public int FindLatestStep(int[] arr, int m)
   {
