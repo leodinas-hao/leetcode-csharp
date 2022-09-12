@@ -51,6 +51,7 @@
 - SumOfSquareNumbers
 - TimeBasedKeyValueStore
 - TwoSumIIInputArrayIsSorted
+- UglyNumberIII
 - ValidTriangleNumber
 - WaysToSplitArrayIntoThreeSubarrays
 
