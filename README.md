@@ -132,6 +132,7 @@
 - SubsetsII
 
 ### Breadth-First Search (BFS)
+- BinaryTreeLevelOrderTraversal
 - CountCompleteTreeNodes
 - JumpGameII
 - JumpGameIII
