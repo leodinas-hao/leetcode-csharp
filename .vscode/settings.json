@@ -1,7 +1,7 @@
 {
   // "dotnet-test-explorer.testProjectPath": "tests",
   // test discovery issue: https://github.com/formulahendry/vscode-dotnet-test-explorer/issues/368
-  "dotnet-test-explorer.treeMode": "flat",
+  "dotnet-test-explorer.treeMode": "merged",
   "dotnet-test-explorer.autoExpandTree": false,
   "dotnet-test-explorer.leftClickAction": "gotoTest",
   "dotnet-test-explorer.enableTelemetry": false
