@@ -160,6 +160,7 @@
 - FindEventualSafeStates
 - FloodFill
 - GenerateParentheses
+- InvertBinaryTree
 - IsGraphBipartite
 - LetterCasePermutation
 - LetterCombinationsOfAPhoneNumber
