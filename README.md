@@ -157,6 +157,7 @@
 - AllPathsFromSourceToTarget
 - BalancedBinaryTree
 - CountSubIslands
+- DiameterOfBinaryTree
 - FindEventualSafeStates
 - FloodFill
 - GenerateParentheses
