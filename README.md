@@ -177,6 +177,7 @@
 - NumberOfIslands
 - NumberOfProvinces
 - PacificAtlanticWaterFlow
+- PathSumIII
 - PossibleBipartition
 - ShortestBridge
 - ShortestPathVisitingAllNodes
