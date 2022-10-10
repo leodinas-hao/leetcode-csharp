@@ -133,6 +133,7 @@
 
 ### Breadth-First Search (BFS)
 - BinaryTreeLevelOrderTraversal
+- BusRoutes
 - CountCompleteTreeNodes
 - JumpGameII
 - JumpGameIII

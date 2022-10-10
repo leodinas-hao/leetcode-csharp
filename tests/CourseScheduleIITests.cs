@@ -48,7 +48,7 @@ public class CourseScheduleIITests
     }
     else
     {
-      Assert.Equal(0, result.Length);
+      Assert.Empty(result);
     }
   }
 }
