@@ -109,6 +109,7 @@
 - MinimumPathSum
 - NthTribonacciNumber
 - NumberOfLongestIncreasingSubsequence
+- PartitionEqualSubsetSum
 - PascalTriangle
 - PascalTriangleII
 - PerfectSquares
