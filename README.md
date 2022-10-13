@@ -186,6 +186,7 @@
 - ShortestPathVisitingAllNodes
 - SubtreeOfAnotherTree
 - SurroundedRegions
+- SymmetricTree
 - TimeNeededToInformAllEmployees
 - ValidateBinarySearchTree
 - WhereWillTheBallFall
