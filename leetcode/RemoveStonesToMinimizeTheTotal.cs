@@ -37,7 +37,7 @@ namespace LeetCode.RemoveStonesToMinimizeTheTotal;
 
 public class Solution
 {
-  public static readonly int MAX = 10000;
+  public readonly int MAX = 10000;
 
   public int MinStoneSum(int[] piles, int k)
   {
@@ -57,5 +57,33 @@ public class Solution
       k--;
     }
     return piles.Sum();
+  }
+}
+
+
+public class Solution2
+{
+  public readonly int MAX = 10000;
+
+  public int MinStoneSum(int[] piles, int k)
+  {
+    var heap = new PriorityQueue<int, int>();
+    double sum = 0;
+    foreach (var p in piles)
+    {
+      // as k <= 10^4
+      heap.Enqueue(p, MAX - p);
+      sum += p;
+    }
+    while (k > 0)
+    {
+      var p = heap.Dequeue();
+      // remove stones from pile
+      var removed = (int)Math.Floor((double)p / 2);
+      sum -= removed;
+      heap.Enqueue(p - removed, MAX - (p - removed));
+      k--;
+    }
+    return (int)sum;
   }
 }
