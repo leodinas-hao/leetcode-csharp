@@ -51,3 +51,20 @@ public class Solution
     return String.Join("", result.Reverse());
   }
 }
+
+public class Solution2
+{
+  public string RemoveStars(string s)
+  {
+    Stack<char> result = new Stack<char>();
+    foreach (var c in s)
+    {
+      if (c == '*')
+      {
+        if (result.Count > 0) result.Pop();
+      }
+      else result.Push(c);
+    }
+    return result.Aggregate("", (str, c) => c + str);
+  }
+}
