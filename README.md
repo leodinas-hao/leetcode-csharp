@@ -5,6 +5,7 @@
 
 ### Bitwise
 - BitwiseAndOfNumbersRange
+- CountingBits
 - NumberOfOneBits
 - PowerOfTwo
 - ReverseBits
