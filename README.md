@@ -58,6 +58,7 @@
 - WaysToSplitArrayIntoThreeSubarrays
 
 ### Two Pointers
+- AssignCookies
 - BackspaceStringCompare
 - ContainerWithMostWater
 - FrequencyOfTheMostFrequentElement
