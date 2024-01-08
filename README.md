@@ -185,6 +185,7 @@
 - PacificAtlanticWaterFlow
 - PathSumIII
 - PossibleBipartition
+- RangeSumOfBST
 - ShortestBridge
 - ShortestPathVisitingAllNodes
 - SubtreeOfAnotherTree
